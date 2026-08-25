@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>El Emprendedor Invisible | Manifiesto y Sistema</title>
+  <title>El Emprendedor Invisible</title>
 
-  <meta
-    name="description"
-    content="El Emprendedor Invisible: Manifiesto y Sistema para el Solopreneur Soberano."
-  />
-
-  <!-- =========================================================
-       TAILWIND CSS — CDN
-       Uso gratuito. No requiere instalación ni build.
-       ========================================================= -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
@@ -22,108 +14,46 @@
       theme: {
         extend: {
           colors: {
-            noir: "#090A0C",
-            charcoal: "#111214",
-            graphite: "#191A1D",
-            gold: "#C88A3D",
-            goldLight: "#E0A65A",
-            ivory: "#F4F1EA",
-            smoke: "#A6A6A0"
-          },
-
-          fontFamily: {
-            sans: [
-              "Inter",
-              "Arial",
-              "Helvetica",
-              "sans-serif"
-            ]
+            gold: "#C98A3D",
+            goldLight: "#E0A45A",
+            dark: "#090A0C",
+            dark2: "#111214",
+            cream: "#F4F1EA"
           }
         }
       }
-    };
+    }
   </script>
 
-  <!-- Tipografía libre vía Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- =========================================================
-       CSS PERSONALIZADO
-       ========================================================= -->
   <style>
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
       background: #090A0C;
       color: #F4F1EA;
-      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    ::selection {
-      background: #C88A3D;
-      color: #090A0C;
-    }
-
-    .hero-grid {
+    .grid-bg {
       background-image:
-        linear-gradient(
-          rgba(255, 255, 255, 0.018) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.018) 1px,
-          transparent 1px
-        );
-      background-size: 56px 56px;
-    }
-
-    .gold-line {
-      background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(200, 138, 61, 0.8),
-        transparent
-      );
-    }
-
-    .gold-glow {
-      box-shadow:
-        0 0 80px rgba(200, 138, 61, 0.08),
-        0 25px 80px rgba(0, 0, 0, 0.4);
-    }
-
-    .text-balance {
-      text-wrap: balance;
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 50px 50px;
     }
   </style>
 </head>
 
-<body class="bg-noir text-ivory antialiased">
+<body class="bg-dark text-cream">
 
-  <!-- =========================================================
-       HEADER
-       ========================================================= -->
-
-  <header
-    class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-noir/90 backdrop-blur-xl"
-  >
-    <div
-      class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5"
-    >
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-dark/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
       <a
         href="#inicio"
-        class="text-xs font-semibold uppercase tracking-[0.22em] text-ivory"
+        class="text-xs font-bold uppercase tracking-[0.2em]"
       >
         El Emprendedor Invisible
       </a>
@@ -132,7 +62,7 @@
         href="https://pay.hotmart.com/H107311208K?off=du9rzvgl&hotfeature=51"
         target="_blank"
         rel="noopener noreferrer"
-        class="rounded-full border border-gold/60 px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-gold transition duration-300 hover:bg-gold hover:text-noir"
+        class="rounded-full border border-gold px-5 py-2 text-xs font-bold uppercase text-gold transition hover:bg-gold hover:text-dark"
       >
         Acceder al Sistema
       </a>
@@ -141,748 +71,373 @@
   </header>
 
 
-  <!-- =========================================================
-       CONTENIDO PRINCIPAL
-       ========================================================= -->
+  <!-- HERO -->
+  <section
+    id="inicio"
+    class="grid-bg flex min-h-screen items-center justify-center px-6 pt-24"
+  >
 
-  <main>
+    <div class="mx-auto max-w-4xl text-center">
 
+      <p class="mb-6 text-xs font-bold uppercase tracking-[0.35em] text-gold">
+        Manifiesto + Sistema
+      </p>
 
-    <!-- =======================================================
-         HERO / PRESENTACIÓN
-         ======================================================= -->
-
-    <section
-      id="inicio"
-      class="relative min-h-screen overflow-hidden bg-noir hero-grid"
-    >
-
-      <!-- Luz ambiental decorativa -->
-
-      <div
-        class="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/5 blur-[150px]"
-      ></div>
-
-
-      <div
-        class="relative mx-auto flex min-h-screen max-w-5xl items-center justify-center px-6 py-32 text-center"
-      >
-
-        <div class="w-full">
-
-
-          <!-- Categoría -->
-
-          <div
-            class="mb-8 flex items-center justify-center gap-4"
-          >
-
-            <span class="h-px w-10 bg-gold"></span>
-
-            <span
-              class="text-xs font-semibold uppercase tracking-[0.35em] text-gold"
-            >
-              Manifiesto + Sistema
-            </span>
-
-            <span class="h-px w-10 bg-gold"></span>
-
-          </div>
-
-
-          <!-- Título -->
-
-          <h1
-            class="text-balance text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-ivory sm:text-7xl lg:text-8xl"
-          >
-            El Emprendedor
-            <span class="block text-gold">
-              Invisible.
-            </span>
-          </h1>
-
-
-          <!-- Subtítulo -->
-
-          <p
-            class="mx-auto mt-8 max-w-3xl text-xl font-medium leading-relaxed text-ivory/90 sm:text-2xl"
-          >
-            Manifiesto y Sistema para el
-            <span class="text-goldLight">
-              Solopreneur Soberano.
-            </span>
-          </p>
-
-
-          <!-- Descripción -->
-
-          <p
-            class="mx-auto mt-7 max-w-2xl text-base leading-8 text-smoke sm:text-lg"
-          >
-            Una filosofía y un sistema práctico para construir un negocio
-            digital con más claridad, autonomía y control.
-          </p>
-
-
-          <!-- CTA PRINCIPAL -->
-
-          <div
-            class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
-          >
-
-            <a
-              href="https://pay.hotmart.com/H107311208K?off=du9rzvgl&hotfeature=51"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group inline-flex w-full items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-bold uppercase tracking-wide text-noir transition duration-300 hover:-translate-y-1 hover:bg-goldLight sm:w-auto"
-            >
-              Quiero el Sistema
-
-              <span
-                class="ml-3 transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </a>
-
-
-            <a
-              href="#sistema"
-              class="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-ivory transition duration-300 hover:border-gold/50 hover:bg-white/5 sm:w-auto"
-            >
-              Descubrir el Sistema
-            </a>
-
-          </div>
-
-
-          <!-- Micro-beneficios -->
-
-          <div
-            class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-wider text-smoke"
-          >
-
-            <span>✓ Claridad</span>
-            <span>✓ Sistemas</span>
-            <span>✓ IA</span>
-            <span>✓ Autonomía</span>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         MANIFIESTO
-         ======================================================= -->
-
-    <section
-      class="border-t border-white/5 bg-charcoal py-24 sm:py-32"
-    >
-
-      <div
-        class="mx-auto max-w-4xl px-6 text-center"
-      >
-
-        <span
-          class="text-xs font-semibold uppercase tracking-[0.35em] text-gold"
-        >
-          El Manifiesto
+      <h1 class="text-5xl font-bold leading-none tracking-tight sm:text-7xl md:text-8xl">
+        El Emprendedor
+        <span class="block text-gold">
+          Invisible.
         </span>
-
-
-        <h2
-          class="mt-6 text-4xl font-semibold leading-tight tracking-tight text-ivory sm:text-5xl"
-        >
-          No necesitas parecer grande.
-          <span class="block text-gold">
-            Necesitas ser libre.
-          </span>
-        </h2>
-
-
-        <div
-          class="mx-auto mt-10 h-px w-32 gold-line"
-        ></div>
-
-
-        <div
-          class="mx-auto mt-10 max-w-3xl space-y-6 text-base leading-8 text-smoke sm:text-lg"
-        >
-
-          <p>
-            El Emprendedor Invisible parte de una premisa:
-            un negocio no debería convertirse en una estructura que
-            controle tu vida.
-          </p>
-
-          <p>
-            La verdadera ventaja del solopreneur no está en tener
-            más empleados, más reuniones o más complejidad.
-            Está en construir
-            <strong class="font-semibold text-ivory">
-              sistemas inteligentes que amplifiquen tu capacidad.
-            </strong>
-          </p>
-
-          <p>
-            Menos ruido. Menos dependencia. Menos burocracia.
-            Más criterio, más tecnología y más autonomía.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         SISTEMA
-         ======================================================= -->
-
-    <section
-      id="sistema"
-      class="bg-noir py-24 sm:py-32"
-    >
-
-      <div
-        class="mx-auto max-w-6xl px-6"
-      >
-
-        <!-- Encabezado -->
-
-        <div class="mx-auto max-w-3xl text-center">
-
-          <span
-            class="text-xs font-semibold uppercase tracking-[0.35em] text-gold"
-          >
-            El Sistema
-          </span>
-
-          <h2
-            class="mt-6 text-4xl font-semibold tracking-tight text-ivory sm:text-5xl"
-          >
-            Una arquitectura para
-            <span class="text-gold">
-              emprender con autonomía.
-            </span>
-          </h2>
-
-          <p
-            class="mt-6 text-base leading-8 text-smoke sm:text-lg"
-          >
-            Un marco estructurado para transformar una idea,
-            una habilidad o una oportunidad en un sistema de negocio.
-          </p>
-
-        </div>
-
-
-        <!-- Cards -->
-
-        <div
-          class="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-        >
-
-
-          <!-- 01 -->
-
-          <article
-            class="gold-glow rounded-2xl border border-white/10 bg-charcoal p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40"
-          >
-
-            <span class="text-xs font-bold tracking-widest text-gold">
-              01
-            </span>
-
-            <h3 class="mt-7 text-xl font-semibold text-ivory">
-              Claridad
-            </h3>
-
-            <p class="mt-4 text-sm leading-7 text-smoke">
-              Define qué estás construyendo, para quién y qué problema
-              estás resolviendo.
-            </p>
-
-          </article>
-
-
-          <!-- 02 -->
-
-          <article
-            class="gold-glow rounded-2xl border border-white/10 bg-charcoal p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40"
-          >
-
-            <span class="text-xs font-bold tracking-widest text-gold">
-              02
-            </span>
-
-            <h3 class="mt-7 text-xl font-semibold text-ivory">
-              Posicionamiento
-            </h3>
-
-            <p class="mt-4 text-sm leading-7 text-smoke">
-              Construye una propuesta clara, diferenciada y fácil
-              de comprender.
-            </p>
-
-          </article>
-
-
-          <!-- 03 -->
-
-          <article
-            class="gold-glow rounded-2xl border border-white/10 bg-charcoal p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40"
-          >
-
-            <span class="text-xs font-bold tracking-widest text-gold">
-              03
-            </span>
-
-            <h3 class="mt-7 text-xl font-semibold text-ivory">
-              Sistema
-            </h3>
-
-            <p class="mt-4 text-sm leading-7 text-smoke">
-              Convierte procesos dispersos en una estructura repetible
-              y organizada.
-            </p>
-
-          </article>
-
-
-          <!-- 04 -->
-
-          <article
-            class="gold-glow rounded-2xl border border-white/10 bg-charcoal p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40"
-          >
-
-            <span class="text-xs font-bold tracking-widest text-gold">
-              04
-            </span>
-
-            <h3 class="mt-7 text-xl font-semibold text-ivory">
-              Automatización
-            </h3>
-
-            <p class="mt-4 text-sm leading-7 text-smoke">
-              Utiliza IA y tecnología para reducir tareas repetitivas
-              y aumentar tu capacidad de ejecución.
-            </p>
-
-          </article>
-
-
-          <!-- 05 -->
-
-          <article
-            class="gold-glow rounded-2xl border border-white/10 bg-charcoal p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40"
-          >
-
-            <span class="text-xs font-bold tracking-widest text-gold">
-              05
-            </span>
-
-            <h3 class="mt-7 text-xl font-semibold text-ivory">
-              Distribución
-            </h3>
-
-            <p class="mt-4 text-sm leading-7 text-smoke">
-              Diseña canales para convertir atención en audiencia,
-              oportunidades y ventas.
-            </p>
-
-          </article>
-
-
-          <!-- 06 -->
-
-          <article
-            class="gold-glow rounded-2xl border border-white/10 bg-charcoal p-7 transition duration-300 hover:-translate-y-1 hover:border-gold/40"
-          >
-
-            <span class="text-xs font-bold tracking-widest text-gold">
-              06
-            </span>
-
-            <h3 class="mt-7 text-xl font-semibold text-ivory">
-              Autonomía
-            </h3>
-
-            <p class="mt-4 text-sm leading-7 text-smoke">
-              Diseña una operación que te permita recuperar control
-              sobre tiempo, energía y decisiones.
-            </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         MINI-APPS
-         ======================================================= -->
-
-    <section
-      id="mini-apps"
-      class="border-y border-white/5 bg-charcoal py-24 sm:py-32"
-    >
-
-      <div
-        class="mx-auto max-w-6xl px-6"
-      >
-
-        <div class="mx-auto max-w-3xl text-center">
-
-          <span
-            class="text-xs font-semibold uppercase tracking-[0.35em] text-gold"
-          >
-            Ecosistema Digital
-          </span>
-
-          <h2
-            class="mt-6 text-4xl font-semibold tracking-tight text-ivory sm:text-5xl"
-          >
-            Mini-apps del
-            <span class="text-gold">
-              Sistema.
-            </span>
-          </h2>
-
-          <p
-            class="mt-6 text-base leading-8 text-smoke sm:text-lg"
-          >
-            Este espacio está preparado para incorporar futuras
-            herramientas interactivas del ecosistema.
-          </p>
-
-        </div>
-
-
-        <!-- =================================================
-             CONTENEDORES DE MINI-APPS
-             ================================================= -->
-
-        <div
-          class="mt-16 grid gap-5 md:grid-cols-2"
-        >
-
-
-          <!-- MINI APP 01 -->
-
-          <div
-            class="group min-h-[280px] rounded-2xl border border-dashed border-white/15 bg-noir p-8 transition duration-300 hover:border-gold/50"
-          >
-
-            <div class="flex items-start justify-between">
-
-              <div>
-
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.2em] text-gold"
-                >
-                  Mini-App 01
-                </span>
-
-                <h3
-                  class="mt-5 text-2xl font-semibold text-ivory"
-                >
-                  Herramienta principal
-                </h3>
-
-              </div>
-
-              <span
-                class="text-2xl text-white/20 transition group-hover:text-gold"
-              >
-                ↗
-              </span>
-
-            </div>
-
-            <p
-              class="mt-5 max-w-md text-sm leading-7 text-smoke"
-            >
-              Espacio preparado para integrar una aplicación,
-              calculadora, asistente o herramienta interactiva.
-            </p>
-
-
-            <!--
-            PARA INSERTAR UNA MINI-APP:
-
-            <iframe
-              src="https://TU-MINI-APP.com"
-              title="Mini-App 01"
-              class="mt-6 h-[500px] w-full rounded-xl border-0"
-              loading="lazy">
-            </iframe>
-            -->
-
-          </div>
-
-
-          <!-- MINI APP 02 -->
-
-          <div
-            class="group min-h-[280px] rounded-2xl border border-dashed border-white/15 bg-noir p-8 transition duration-300 hover:border-gold/50"
-          >
-
-            <div class="flex items-start justify-between">
-
-              <div>
-
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.2em] text-gold"
-                >
-                  Mini-App 02
-                </span>
-
-                <h3
-                  class="mt-5 text-2xl font-semibold text-ivory"
-                >
-                  Herramienta estratégica
-                </h3>
-
-              </div>
-
-              <span
-                class="text-2xl text-white/20 transition group-hover:text-gold"
-              >
-                ↗
-              </span>
-
-            </div>
-
-            <p
-              class="mt-5 max-w-md text-sm leading-7 text-smoke"
-            >
-              Espacio reservado para una segunda herramienta
-              del ecosistema.
-            </p>
-
-          </div>
-
-
-          <!-- MINI APP 03 -->
-
-          <div
-            class="group min-h-[280px] rounded-2xl border border-dashed border-white/15 bg-noir p-8 transition duration-300 hover:border-gold/50"
-          >
-
-            <div class="flex items-start justify-between">
-
-              <div>
-
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.2em] text-gold"
-                >
-                  Mini-App 03
-                </span>
-
-                <h3
-                  class="mt-5 text-2xl font-semibold text-ivory"
-                >
-                  Asistente de ejecución
-                </h3>
-
-              </div>
-
-              <span
-                class="text-2xl text-white/20 transition group-hover:text-gold"
-              >
-                ↗
-              </span>
-
-            </div>
-
-            <p
-              class="mt-5 max-w-md text-sm leading-7 text-smoke"
-            >
-              Espacio reservado para una herramienta adicional
-              orientada a la ejecución.
-            </p>
-
-          </div>
-
-
-          <!-- MINI APP 04 -->
-
-          <div
-            class="group min-h-[280px] rounded-2xl border border-dashed border-white/15 bg-noir p-8 transition duration-300 hover:border-gold/50"
-          >
-
-            <div class="flex items-start justify-between">
-
-              <div>
-
-                <span
-                  class="text-xs font-bold uppercase tracking-[0.2em] text-gold"
-                >
-                  Mini-App 04
-                </span>
-
-                <h3
-                  class="mt-5 text-2xl font-semibold text-ivory"
-                >
-                  Próximamente
-                </h3>
-
-              </div>
-
-              <span
-                class="text-2xl text-white/20 transition group-hover:text-gold"
-              >
-                +
-              </span>
-
-            </div>
-
-            <p
-              class="mt-5 max-w-md text-sm leading-7 text-smoke"
-            >
-              El ecosistema puede crecer con nuevas herramientas
-              y funcionalidades.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =======================================================
-         CTA FINAL
-         ======================================================= -->
-
-    <section
-      class="relative overflow-hidden bg-noir py-28 sm:py-36"
-    >
-
-      <div
-        class="pointer-events-none absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/5 blur-[150px]"
-      ></div>
-
-
-      <div
-        class="relative mx-auto max-w-4xl px-6 text-center"
-      >
-
-        <span
-          class="text-xs font-semibold uppercase tracking-[0.35em] text-gold"
-        >
-          El siguiente movimiento
+      </h1>
+
+      <p class="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-300 sm:text-2xl">
+        Manifiesto y Sistema para el
+        <span class="text-goldLight">
+          Solopreneur Soberano.
         </span>
+      </p>
 
+      <p class="mx-auto mt-6 max-w-xl text-base leading-7 text-gray-400">
+        Un sistema práctico para construir un negocio digital con más
+        claridad, autonomía y control.
+      </p>
 
-        <h2
-          class="mt-6 text-balance text-4xl font-semibold leading-tight tracking-tight text-ivory sm:text-6xl"
-        >
-          Deja de construir un negocio
-          <span class="text-gold">
-            que te necesita para todo.
-          </span>
-        </h2>
-
-
-        <p
-          class="mx-auto mt-7 max-w-2xl text-base leading-8 text-smoke sm:text-lg"
-        >
-          Construye un sistema. Diseña tu autonomía.
-          Recupera el control sobre cómo trabajas y cómo crece tu negocio.
-        </p>
-
-
-        <!-- HOTMART -->
+      <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
 
         <a
           href="https://pay.hotmart.com/H107311208K?off=du9rzvgl&hotfeature=51"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-10 inline-flex items-center justify-center rounded-full bg-gold px-10 py-5 text-sm font-bold uppercase tracking-wide text-noir transition duration-300 hover:-translate-y-1 hover:bg-goldLight"
+          class="rounded-full bg-gold px-8 py-4 text-sm font-bold uppercase text-dark transition hover:bg-goldLight hover:-translate-y-1"
         >
-          Acceder al Sistema
-
-          <span class="ml-3">
-            →
-          </span>
+          Quiero el Sistema →
         </a>
 
-
-        <p
-          class="mt-5 text-xs text-smoke"
+        <a
+          href="#sistema"
+          class="rounded-full border border-white/20 px-8 py-4 text-sm font-bold uppercase transition hover:border-gold hover:text-gold"
         >
-          Compra segura mediante Hotmart.
+          Conocer el Sistema
+        </a>
+
+      </div>
+
+      <div class="mt-10 flex flex-wrap justify-center gap-6 text-xs uppercase tracking-wider text-gray-500">
+        <span>✓ Claridad</span>
+        <span>✓ Sistemas</span>
+        <span>✓ IA</span>
+        <span>✓ Autonomía</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MANIFIESTO -->
+  <section class="border-t border-white/10 bg-dark2 px-6 py-24">
+
+    <div class="mx-auto max-w-3xl text-center">
+
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-gold">
+        El Manifiesto
+      </p>
+
+      <h2 class="mt-5 text-4xl font-bold sm:text-5xl">
+        No necesitas parecer grande.
+        <span class="block text-gold">
+          Necesitas ser libre.
+        </span>
+      </h2>
+
+      <div class="mx-auto my-10 h-px w-24 bg-gold"></div>
+
+      <div class="space-y-6 text-lg leading-8 text-gray-400">
+
+        <p>
+          Un negocio no debería convertirse en una estructura que controle
+          tu vida.
+        </p>
+
+        <p>
+          La ventaja del solopreneur está en construir
+          <strong class="text-white">
+            sistemas inteligentes que amplifiquen tu capacidad.
+          </strong>
+        </p>
+
+        <p>
+          Menos ruido. Menos dependencia. Menos burocracia.
+          Más criterio, tecnología y autonomía.
         </p>
 
       </div>
 
-    </section>
+    </div>
 
-  </main>
+  </section>
 
 
-  <!-- =========================================================
-       FOOTER
-       ========================================================= -->
-
-  <footer
-    class="border-t border-white/5 bg-noir"
+  <!-- SISTEMA -->
+  <section
+    id="sistema"
+    class="bg-dark px-6 py-24"
   >
 
-    <div
-      class="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left"
-    >
+    <div class="mx-auto max-w-6xl">
 
-      <div>
+      <div class="mx-auto max-w-3xl text-center">
 
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.15em] text-ivory"
-        >
-          El Emprendedor Invisible
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-gold">
+          El Sistema
         </p>
 
-        <p
-          class="mt-2 text-xs text-smoke"
-        >
-          Manifiesto y Sistema para el Solopreneur Soberano.
+        <h2 class="mt-5 text-4xl font-bold sm:text-5xl">
+          Una arquitectura para
+          <span class="text-gold">
+            emprender con autonomía.
+          </span>
+        </h2>
+
+        <p class="mt-6 text-lg leading-8 text-gray-400">
+          Un marco estructurado para transformar ideas y oportunidades
+          en un sistema de negocio.
         </p>
 
       </div>
 
 
-      <p
-        id="copyright"
-        class="text-xs text-smoke"
+      <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
+          <span class="text-sm font-bold text-gold">01</span>
+          <h3 class="mt-6 text-xl font-bold">Claridad</h3>
+          <p class="mt-3 leading-7 text-gray-400">
+            Define qué estás construyendo, para quién y qué problema resuelves.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
+          <span class="text-sm font-bold text-gold">02</span>
+          <h3 class="mt-6 text-xl font-bold">Posicionamiento</h3>
+          <p class="mt-3 leading-7 text-gray-400">
+            Construye una propuesta clara y diferenciada.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
+          <span class="text-sm font-bold text-gold">03</span>
+          <h3 class="mt-6 text-xl font-bold">Sistema</h3>
+          <p class="mt-3 leading-7 text-gray-400">
+            Convierte procesos dispersos en estructuras repetibles.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
+          <span class="text-sm font-bold text-gold">04</span>
+          <h3 class="mt-6 text-xl font-bold">Automatización</h3>
+          <p class="mt-3 leading-7 text-gray-400">
+            Utiliza IA y tecnología para reducir tareas repetitivas.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
+          <span class="text-sm font-bold text-gold">05</span>
+          <h3 class="mt-6 text-xl font-bold">Distribución</h3>
+          <p class="mt-3 leading-7 text-gray-400">
+            Convierte atención en audiencia, oportunidades y ventas.
+          </p>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
+          <span class="text-sm font-bold text-gold">06</span>
+          <h3 class="mt-6 text-xl font-bold">Autonomía</h3>
+          <p class="mt-3 leading-7 text-gray-400">
+            Recupera control sobre tu tiempo, energía y decisiones.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MINI APPS -->
+  <section
+    id="mini-apps"
+    class="border-y border-white/10 bg-dark2 px-6 py-24"
+  >
+
+    <div class="mx-auto max-w-6xl">
+
+      <div class="mx-auto max-w-3xl text-center">
+
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-gold">
+          Ecosistema Digital
+        </p>
+
+        <h2 class="mt-5 text-4xl font-bold sm:text-5xl">
+          Mini-apps del
+          <span class="text-gold">
+            Sistema.
+          </span>
+        </h2>
+
+        <p class="mt-6 text-lg leading-8 text-gray-400">
+          Espacio preparado para integrar futuras herramientas,
+          calculadoras, asistentes y aplicaciones.
+        </p>
+
+      </div>
+
+
+      <div class="mt-14 grid gap-5 md:grid-cols-2">
+
+        <!-- MINI APP 01 -->
+        <div class="min-h-[260px] rounded-2xl border border-dashed border-white/20 bg-dark p-8">
+
+          <p class="text-xs font-bold uppercase tracking-widest text-gold">
+            Mini-App 01
+          </p>
+
+          <h3 class="mt-5 text-2xl font-bold">
+            Herramienta principal
+          </h3>
+
+          <p class="mt-4 leading-7 text-gray-400">
+            Espacio preparado para integrar una aplicación interactiva.
+          </p>
+
+          <!--
+          PARA INSERTAR UNA MINI-APP:
+
+          <iframe
+            src="https://TU-MINI-APP.com"
+            title="Mini-App 01"
+            class="mt-6 h-[500px] w-full rounded-xl border-0">
+          </iframe>
+          -->
+
+        </div>
+
+
+        <!-- MINI APP 02 -->
+        <div class="min-h-[260px] rounded-2xl border border-dashed border-white/20 bg-dark p-8">
+
+          <p class="text-xs font-bold uppercase tracking-widest text-gold">
+            Mini-App 02
+          </p>
+
+          <h3 class="mt-5 text-2xl font-bold">
+            Herramienta estratégica
+          </h3>
+
+          <p class="mt-4 leading-7 text-gray-400">
+            Espacio preparado para una segunda herramienta del sistema.
+          </p>
+
+        </div>
+
+
+        <!-- MINI APP 03 -->
+        <div class="min-h-[260px] rounded-2xl border border-dashed border-white/20 bg-dark p-8">
+
+          <p class="text-xs font-bold uppercase tracking-widest text-gold">
+            Mini-App 03
+          </p>
+
+          <h3 class="mt-5 text-2xl font-bold">
+            Asistente de ejecución
+          </h3>
+
+          <p class="mt-4 leading-7 text-gray-400">
+            Espacio reservado para una herramienta adicional.
+          </p>
+
+        </div>
+
+
+        <!-- MINI APP 04 -->
+        <div class="min-h-[260px] rounded-2xl border border-dashed border-white/20 bg-dark p-8">
+
+          <p class="text-xs font-bold uppercase tracking-widest text-gold">
+            Mini-App 04
+          </p>
+
+          <h3 class="mt-5 text-2xl font-bold">
+            Próximamente
+          </h3>
+
+          <p class="mt-4 leading-7 text-gray-400">
+            Nuevas herramientas podrán incorporarse aquí.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA FINAL -->
+  <section class="bg-dark px-6 py-28 text-center">
+
+    <div class="mx-auto max-w-4xl">
+
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-gold">
+        El siguiente movimiento
+      </p>
+
+      <h2 class="mt-6 text-4xl font-bold sm:text-6xl">
+        Deja de construir un negocio
+        <span class="block text-gold">
+          que te necesita para todo.
+        </span>
+      </h2>
+
+      <p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-gray-400">
+        Construye un sistema. Diseña tu autonomía.
+        Recupera el control sobre cómo trabajas y cómo crece tu negocio.
+      </p>
+
+      <a
+        href="https://pay.hotmart.com/H107311208K?off=du9rzvgl&hotfeature=51"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-10 inline-block rounded-full bg-gold px-10 py-5 text-sm font-bold uppercase text-dark transition hover:bg-goldLight hover:-translate-y-1"
       >
-        © 2026 — Todos los derechos reservados.
+        Acceder al Sistema →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-dark">
+
+    <div class="mx-auto max-w-6xl px-6 py-10 text-center">
+
+      <p class="text-sm font-bold uppercase tracking-widest">
+        El Emprendedor Invisible
+      </p>
+
+      <p class="mt-2 text-xs text-gray-500">
+        Manifiesto y Sistema para el Solopreneur Soberano.
+      </p>
+
+      <p class="mt-6 text-xs text-gray-600">
+        © 2026 Todos los derechos reservados.
       </p>
 
     </div>
 
   </footer>
-
-
-  <!-- =========================================================
-       JAVASCRIPT MÍNIMO
-       ========================================================= -->
-
-  <script>
-    document.getElementById("copyright").textContent =
-      `© ${new Date().getFullYear()} — Todos los derechos reservados.`;
-  </script>
 
 </body>
 </html>
