@@ -6,55 +6,703 @@
 
   <title>El Emprendedor Invisible</title>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            gold: "#C98A3D",
-            goldLight: "#E0A45A",
-            dark: "#090A0C",
-            dark2: "#111214",
-            cream: "#F4F1EA"
-          }
-        }
-      }
-    }
-  </script>
+  <meta
+    name="description"
+    content="El Emprendedor Invisible: Manifiesto y Sistema para el Solopreneur Soberano."
+  >
 
   <style>
+    /* =========================================================
+       VARIABLES DE COLOR — PALETA OFICIAL
+       ========================================================= */
+
+    :root {
+      --background: #0B0F19;
+      --text: #F8F9FA;
+      --card: #121619;
+      --accent: #D35400;
+    }
+
+
+    /* =========================================================
+       RESET
+       ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
     body {
-      background: #090A0C;
-      color: #F4F1EA;
-      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0B0F19;
+      color: #F8F9FA;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .grid-bg {
-      background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size: 50px 50px;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+
+    /* =========================================================
+       CONTENEDOR
+       ========================================================= */
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+
+    /* =========================================================
+       HEADER
+       ========================================================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+
+      background-color: #0B0F19;
+      border-bottom: 1px solid rgba(248, 249, 250, 0.08);
+    }
+
+    .nav {
+      min-height: 72px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 10px 18px;
+
+      border: 1px solid #D35400;
+      border-radius: 999px;
+
+      color: #F8F9FA;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .nav-button:hover {
+      background-color: #D35400;
+      color: #F8F9FA;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 140px 0 100px;
+
+      text-align: center;
+
+      background-color: #0B0F19;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+
+      color: #D35400;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 9vw, 100px);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #D35400;
+    }
+
+    .hero-subtitle {
+      max-width: 700px;
+      margin: 32px auto 0;
+
+      color: #F8F9FA;
+
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 500;
+      line-height: 1.35;
+    }
+
+    .hero-description {
+      max-width: 600px;
+      margin: 22px auto 0;
+
+      color: rgba(248, 249, 250, 0.65);
+
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      margin-top: 42px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+    }
+
+
+    /* =========================================================
+       BOTONES
+       ========================================================= */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 52px;
+      padding: 0 28px;
+
+      border-radius: 999px;
+
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        background-color 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      background-color: #D35400;
+      color: #F8F9FA;
+    }
+
+    .button-primary:hover {
+      opacity: 0.9;
+    }
+
+    .button-secondary {
+      background-color: transparent;
+      border: 1px solid rgba(248, 249, 250, 0.2);
+      color: #F8F9FA;
+    }
+
+    .button-secondary:hover {
+      border-color: #D35400;
+      background-color: #D35400;
+    }
+
+
+    /* =========================================================
+       HERO BENEFITS
+       ========================================================= */
+
+    .hero-benefits {
+      margin-top: 42px;
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      gap: 12px 28px;
+
+      color: rgba(248, 249, 250, 0.5);
+
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       SECCIONES
+       ========================================================= */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .section-dark {
+      background-color: #0B0F19;
+    }
+
+    .section-card {
+      background-color: #121619;
+    }
+
+    .section-header {
+      max-width: 720px;
+      margin: 0 auto 60px;
+
+      text-align: center;
+    }
+
+    .section-label {
+      margin-bottom: 18px;
+
+      color: #D35400;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 6vw, 58px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    .section-title span {
+      color: #D35400;
+    }
+
+    .section-description {
+      margin-top: 22px;
+
+      color: rgba(248, 249, 250, 0.62);
+
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       MANIFIESTO
+       ========================================================= */
+
+    .manifesto {
+      background-color: #121619;
+    }
+
+    .manifesto-content {
+      max-width: 760px;
+      margin: 0 auto;
+
+      text-align: center;
+    }
+
+    .manifesto-content p {
+      margin-top: 24px;
+
+      color: rgba(248, 249, 250, 0.68);
+
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .manifesto-content strong {
+      color: #F8F9FA;
+      font-weight: 600;
+    }
+
+    .divider {
+      width: 100px;
+      height: 1px;
+
+      margin: 42px auto;
+
+      background-color: #D35400;
+    }
+
+    .manifesto-quote {
+      color: #F8F9FA !important;
+
+      font-size: 24px !important;
+      font-weight: 600;
+      line-height: 1.5 !important;
+    }
+
+    .manifesto-quote span {
+      color: #D35400;
+    }
+
+
+    /* =========================================================
+       SISTEMA
+       ========================================================= */
+
+    .system-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+    .system-card {
+      background-color: #121619;
+
+      border: 1px solid rgba(248, 249, 250, 0.08);
+      border-radius: 16px;
+
+      padding: 32px;
+
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .system-card:hover {
+      transform: translateY(-5px);
+      border-color: #D35400;
+    }
+
+    .system-number {
+      color: #D35400;
+
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+    }
+
+    .system-card h3 {
+      margin-top: 24px;
+
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .system-card p {
+      margin-top: 12px;
+
+      color: rgba(248, 249, 250, 0.58);
+
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+
+    /* =========================================================
+       MINI APPS
+       ========================================================= */
+
+    .apps {
+      background-color: #121619;
+    }
+
+    .apps-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 18px;
+    }
+
+    .app-card {
+      min-height: 280px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      background-color: #0B0F19;
+
+      border: 1px dashed rgba(248, 249, 250, 0.18);
+      border-radius: 16px;
+
+      padding: 36px;
+
+      transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .app-card:hover {
+      border-color: #D35400;
+      transform: translateY(-3px);
+    }
+
+    .app-number {
+      color: #D35400;
+
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .app-card h3 {
+      margin-top: 18px;
+
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .app-card p {
+      max-width: 480px;
+      margin-top: 12px;
+
+      color: rgba(248, 249, 250, 0.55);
+
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .app-placeholder {
+      margin-top: 25px;
+
+      display: inline-flex;
+      align-items: center;
+
+      width: fit-content;
+
+      padding: 8px 12px;
+
+      border: 1px solid rgba(248, 249, 250, 0.1);
+      border-radius: 6px;
+
+      color: rgba(248, 249, 250, 0.4);
+
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+
+    /* =========================================================
+       CTA FINAL
+       ========================================================= */
+
+    .final-cta {
+      text-align: center;
+      background-color: #0B0F19;
+    }
+
+    .final-cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .final-cta h2 span {
+      color: #D35400;
+    }
+
+    .final-cta p {
+      max-width: 600px;
+      margin: 25px auto 0;
+
+      color: rgba(248, 249, 250, 0.6);
+
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .final-cta .button {
+      margin-top: 35px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background-color: #0B0F19;
+
+      border-top: 1px solid rgba(248, 249, 250, 0.08);
+
+      padding: 45px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .footer-description {
+      margin-top: 6px;
+
+      color: rgba(248, 249, 250, 0.4);
+
+      font-size: 12px;
+    }
+
+    .copyright {
+      color: rgba(248, 249, 250, 0.35);
+
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 800px) {
+
+      .system-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: min(100% - 28px, 1100px);
+      }
+
+      header .nav {
+        min-height: 64px;
+      }
+
+      .brand {
+        max-width: 170px;
+
+        font-size: 10px;
+        line-height: 1.4;
+      }
+
+      .nav-button {
+        padding: 8px 12px;
+        font-size: 10px;
+      }
+
+      .hero {
+        padding: 120px 0 80px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .hero-benefits {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .system-grid,
+      .apps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .system-card,
+      .app-card {
+        padding: 28px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
     }
   </style>
 </head>
 
-<body class="bg-dark text-cream">
 
-  <!-- HEADER -->
-  <header class="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-dark/90 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+<body>
 
-      <a
-        href="#inicio"
-        class="text-xs font-bold uppercase tracking-[0.2em]"
-      >
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#inicio" class="brand">
         El Emprendedor Invisible
       </a>
 
@@ -62,378 +710,450 @@
         href="https://pay.hotmart.com/H107311208K?off=du9rzvgl&hotfeature=51"
         target="_blank"
         rel="noopener noreferrer"
-        class="rounded-full border border-gold px-5 py-2 text-xs font-bold uppercase text-gold transition hover:bg-gold hover:text-dark"
+        class="nav-button"
       >
         Acceder al Sistema
       </a>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
-  <section
-    id="inicio"
-    class="grid-bg flex min-h-screen items-center justify-center px-6 pt-24"
-  >
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
 
-    <div class="mx-auto max-w-4xl text-center">
+  <main>
 
-      <p class="mb-6 text-xs font-bold uppercase tracking-[0.35em] text-gold">
-        Manifiesto + Sistema
-      </p>
+    <section id="inicio" class="hero">
 
-      <h1 class="text-5xl font-bold leading-none tracking-tight sm:text-7xl md:text-8xl">
-        El Emprendedor
-        <span class="block text-gold">
-          Invisible.
-        </span>
-      </h1>
+      <div class="container">
 
-      <p class="mx-auto mt-8 max-w-2xl text-xl leading-relaxed text-gray-300 sm:text-2xl">
-        Manifiesto y Sistema para el
-        <span class="text-goldLight">
-          Solopreneur Soberano.
-        </span>
-      </p>
+        <div class="hero-content">
 
-      <p class="mx-auto mt-6 max-w-xl text-base leading-7 text-gray-400">
-        Un sistema práctico para construir un negocio digital con más
-        claridad, autonomía y control.
-      </p>
+          <div class="eyebrow">
+            Manifiesto + Sistema
+          </div>
 
-      <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+          <h1>
+            El Emprendedor
+            <span>Invisible.</span>
+          </h1>
 
-        <a
-          href="https://pay.hotmart.com/H107311208K?off=du9rzvgl&hotfeature=51"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="rounded-full bg-gold px-8 py-4 text-sm font-bold uppercase text-dark transition hover:bg-goldLight hover:-translate-y-1"
-        >
-          Quiero el Sistema →
-        </a>
-
-        <a
-          href="#sistema"
-          class="rounded-full border border-white/20 px-8 py-4 text-sm font-bold uppercase transition hover:border-gold hover:text-gold"
-        >
-          Conocer el Sistema
-        </a>
-
-      </div>
-
-      <div class="mt-10 flex flex-wrap justify-center gap-6 text-xs uppercase tracking-wider text-gray-500">
-        <span>✓ Claridad</span>
-        <span>✓ Sistemas</span>
-        <span>✓ IA</span>
-        <span>✓ Autonomía</span>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- MANIFIESTO -->
-  <section class="border-t border-white/10 bg-dark2 px-6 py-24">
-
-    <div class="mx-auto max-w-3xl text-center">
-
-      <p class="text-xs font-bold uppercase tracking-[0.3em] text-gold">
-        El Manifiesto
-      </p>
-
-      <h2 class="mt-5 text-4xl font-bold sm:text-5xl">
-        No necesitas parecer grande.
-        <span class="block text-gold">
-          Necesitas ser libre.
-        </span>
-      </h2>
-
-      <div class="mx-auto my-10 h-px w-24 bg-gold"></div>
-
-      <div class="space-y-6 text-lg leading-8 text-gray-400">
-
-        <p>
-          Un negocio no debería convertirse en una estructura que controle
-          tu vida.
-        </p>
-
-        <p>
-          La ventaja del solopreneur está en construir
-          <strong class="text-white">
-            sistemas inteligentes que amplifiquen tu capacidad.
-          </strong>
-        </p>
-
-        <p>
-          Menos ruido. Menos dependencia. Menos burocracia.
-          Más criterio, tecnología y autonomía.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SISTEMA -->
-  <section
-    id="sistema"
-    class="bg-dark px-6 py-24"
-  >
-
-    <div class="mx-auto max-w-6xl">
-
-      <div class="mx-auto max-w-3xl text-center">
-
-        <p class="text-xs font-bold uppercase tracking-[0.3em] text-gold">
-          El Sistema
-        </p>
-
-        <h2 class="mt-5 text-4xl font-bold sm:text-5xl">
-          Una arquitectura para
-          <span class="text-gold">
-            emprender con autonomía.
-          </span>
-        </h2>
-
-        <p class="mt-6 text-lg leading-8 text-gray-400">
-          Un marco estructurado para transformar ideas y oportunidades
-          en un sistema de negocio.
-        </p>
-
-      </div>
-
-
-      <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-
-        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
-          <span class="text-sm font-bold text-gold">01</span>
-          <h3 class="mt-6 text-xl font-bold">Claridad</h3>
-          <p class="mt-3 leading-7 text-gray-400">
-            Define qué estás construyendo, para quién y qué problema resuelves.
-          </p>
-        </article>
-
-        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
-          <span class="text-sm font-bold text-gold">02</span>
-          <h3 class="mt-6 text-xl font-bold">Posicionamiento</h3>
-          <p class="mt-3 leading-7 text-gray-400">
-            Construye una propuesta clara y diferenciada.
-          </p>
-        </article>
-
-        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
-          <span class="text-sm font-bold text-gold">03</span>
-          <h3 class="mt-6 text-xl font-bold">Sistema</h3>
-          <p class="mt-3 leading-7 text-gray-400">
-            Convierte procesos dispersos en estructuras repetibles.
-          </p>
-        </article>
-
-        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
-          <span class="text-sm font-bold text-gold">04</span>
-          <h3 class="mt-6 text-xl font-bold">Automatización</h3>
-          <p class="mt-3 leading-7 text-gray-400">
-            Utiliza IA y tecnología para reducir tareas repetitivas.
-          </p>
-        </article>
-
-        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
-          <span class="text-sm font-bold text-gold">05</span>
-          <h3 class="mt-6 text-xl font-bold">Distribución</h3>
-          <p class="mt-3 leading-7 text-gray-400">
-            Convierte atención en audiencia, oportunidades y ventas.
-          </p>
-        </article>
-
-        <article class="rounded-2xl border border-white/10 bg-dark2 p-7 hover:border-gold/50">
-          <span class="text-sm font-bold text-gold">06</span>
-          <h3 class="mt-6 text-xl font-bold">Autonomía</h3>
-          <p class="mt-3 leading-7 text-gray-400">
-            Recupera control sobre tu tiempo, energía y decisiones.
-          </p>
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- MINI APPS -->
-  <section
-    id="mini-apps"
-    class="border-y border-white/10 bg-dark2 px-6 py-24"
-  >
-
-    <div class="mx-auto max-w-6xl">
-
-      <div class="mx-auto max-w-3xl text-center">
-
-        <p class="text-xs font-bold uppercase tracking-[0.3em] text-gold">
-          Ecosistema Digital
-        </p>
-
-        <h2 class="mt-5 text-4xl font-bold sm:text-5xl">
-          Mini-apps del
-          <span class="text-gold">
-            Sistema.
-          </span>
-        </h2>
-
-        <p class="mt-6 text-lg leading-8 text-gray-400">
-          Espacio preparado para integrar futuras herramientas,
-          calculadoras, asistentes y aplicaciones.
-        </p>
-
-      </div>
-
-
-      <div class="mt-14 grid gap-5 md:grid-cols-2">
-
-        <!-- MINI APP 01 -->
-        <div class="min-h-[260px] rounded-2xl border border-dashed border-white/20 bg-dark p-8">
-
-          <p class="text-xs font-bold uppercase tracking-widest text-gold">
-            Mini-App 01
+          <p class="hero-subtitle">
+            Manifiesto y Sistema para el Solopreneur Soberano.
           </p>
 
-          <h3 class="mt-5 text-2xl font-bold">
-            Herramienta principal
-          </h3>
-
-          <p class="mt-4 leading-7 text-gray-400">
-            Espacio preparado para integrar una aplicación interactiva.
+          <p class="hero-description">
+            Un sistema práctico para construir un negocio digital
+            con más claridad, autonomía y control.
           </p>
 
-          <!--
-          PARA INSERTAR UNA MINI-APP:
+          <div class="hero-actions">
 
-          <iframe
-            src="https://TU-MINI-APP.com"
-            title="Mini-App 01"
-            class="mt-6 h-[500px] w-full rounded-xl border-0">
-          </iframe>
-          -->
+            <a
+              href="https://pay.hotmart.com/H107311208K?off=du9rzvgl&hotfeature=51"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button button-primary"
+            >
+              Quiero el Sistema →
+            </a>
+
+            <a
+              href="#sistema"
+              class="button button-secondary"
+            >
+              Conocer el Sistema
+            </a>
+
+          </div>
+
+          <div class="hero-benefits">
+            <span>✓ Claridad</span>
+            <span>✓ Sistemas</span>
+            <span>✓ Inteligencia Artificial</span>
+            <span>✓ Autonomía</span>
+          </div>
 
         </div>
 
+      </div>
 
-        <!-- MINI APP 02 -->
-        <div class="min-h-[260px] rounded-2xl border border-dashed border-white/20 bg-dark p-8">
+    </section>
 
-          <p class="text-xs font-bold uppercase tracking-widest text-gold">
-            Mini-App 02
+
+    <!-- =======================================================
+         MANIFIESTO
+         ======================================================= -->
+
+    <section class="manifesto">
+
+      <div class="container">
+
+        <div class="manifesto-content">
+
+          <div class="section-label">
+            El Manifiesto
+          </div>
+
+          <h2 class="section-title">
+            No necesitas parecer grande.
+            <span>Necesitas ser libre.</span>
+          </h2>
+
+          <div class="divider"></div>
+
+          <p>
+            Un negocio no debería convertirse en una estructura
+            que controle tu vida.
           </p>
 
-          <h3 class="mt-5 text-2xl font-bold">
-            Herramienta estratégica
-          </h3>
-
-          <p class="mt-4 leading-7 text-gray-400">
-            Espacio preparado para una segunda herramienta del sistema.
+          <p>
+            La ventaja del solopreneur está en construir
+            <strong>
+              sistemas inteligentes que amplifiquen tu capacidad
+            </strong>
+            sin añadir complejidad innecesaria.
           </p>
 
-        </div>
-
-
-        <!-- MINI APP 03 -->
-        <div class="min-h-[260px] rounded-2xl border border-dashed border-white/20 bg-dark p-8">
-
-          <p class="text-xs font-bold uppercase tracking-widest text-gold">
-            Mini-App 03
+          <p>
+            Menos ruido. Menos dependencia. Menos burocracia.
+            Más criterio, tecnología y autonomía.
           </p>
 
-          <h3 class="mt-5 text-2xl font-bold">
-            Asistente de ejecución
-          </h3>
-
-          <p class="mt-4 leading-7 text-gray-400">
-            Espacio reservado para una herramienta adicional.
-          </p>
-
-        </div>
-
-
-        <!-- MINI APP 04 -->
-        <div class="min-h-[260px] rounded-2xl border border-dashed border-white/20 bg-dark p-8">
-
-          <p class="text-xs font-bold uppercase tracking-widest text-gold">
-            Mini-App 04
-          </p>
-
-          <h3 class="mt-5 text-2xl font-bold">
-            Próximamente
-          </h3>
-
-          <p class="mt-4 leading-7 text-gray-400">
-            Nuevas herramientas podrán incorporarse aquí.
+          <p class="manifesto-quote">
+            Construye un sistema que trabaje
+            <span>contigo</span>,
+            no una empresa que trabaje
+            <span>contra ti.</span>
           </p>
 
         </div>
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- CTA FINAL -->
-  <section class="bg-dark px-6 py-28 text-center">
+    <!-- =======================================================
+         SISTEMA
+         ======================================================= -->
 
-    <div class="mx-auto max-w-4xl">
+    <section id="sistema" class="section-dark">
 
-      <p class="text-xs font-bold uppercase tracking-[0.3em] text-gold">
-        El siguiente movimiento
-      </p>
+      <div class="container">
 
-      <h2 class="mt-6 text-4xl font-bold sm:text-6xl">
-        Deja de construir un negocio
-        <span class="block text-gold">
-          que te necesita para todo.
-        </span>
-      </h2>
+        <div class="section-header">
 
-      <p class="mx-auto mt-7 max-w-2xl text-lg leading-8 text-gray-400">
-        Construye un sistema. Diseña tu autonomía.
-        Recupera el control sobre cómo trabajas y cómo crece tu negocio.
-      </p>
+          <div class="section-label">
+            El Sistema
+          </div>
 
-      <a
-        href="https://pay.hotmart.com/H107311208K?off=du9rzvgl&hotfeature=51"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-10 inline-block rounded-full bg-gold px-10 py-5 text-sm font-bold uppercase text-dark transition hover:bg-goldLight hover:-translate-y-1"
-      >
-        Acceder al Sistema →
-      </a>
+          <h2 class="section-title">
+            Una arquitectura para
+            <span>emprender con autonomía.</span>
+          </h2>
 
-    </div>
+          <p class="section-description">
+            Un marco estructurado para transformar ideas,
+            habilidades y oportunidades en un sistema de negocio.
+          </p>
 
-  </section>
+        </div>
 
 
-  <!-- FOOTER -->
-  <footer class="border-t border-white/10 bg-dark">
+        <div class="system-grid">
 
-    <div class="mx-auto max-w-6xl px-6 py-10 text-center">
+          <article class="system-card">
+            <div class="system-number">01</div>
 
-      <p class="text-sm font-bold uppercase tracking-widest">
-        El Emprendedor Invisible
-      </p>
+            <h3>Claridad</h3>
 
-      <p class="mt-2 text-xs text-gray-500">
-        Manifiesto y Sistema para el Solopreneur Soberano.
-      </p>
+            <p>
+              Define qué estás construyendo, para quién y qué
+              problema estás resolviendo.
+            </p>
+          </article>
 
-      <p class="mt-6 text-xs text-gray-600">
+
+          <article class="system-card">
+            <div class="system-number">02</div>
+
+            <h3>Posicionamiento</h3>
+
+            <p>
+              Construye una propuesta clara, diferenciada
+              y fácil de comprender.
+            </p>
+          </article>
+
+
+          <article class="system-card">
+            <div class="system-number">03</div>
+
+            <h3>Sistema</h3>
+
+            <p>
+              Convierte procesos dispersos en estructuras
+              repetibles y organizadas.
+            </p>
+          </article>
+
+
+          <article class="system-card">
+            <div class="system-number">04</div>
+
+            <h3>Automatización</h3>
+
+            <p>
+              Utiliza IA y tecnología para reducir tareas
+              repetitivas y aumentar tu capacidad.
+            </p>
+          </article>
+
+
+          <article class="system-card">
+            <div class="system-number">05</div>
+
+            <h3>Distribución</h3>
+
+            <p>
+              Convierte atención en audiencia,
+              oportunidades y ventas.
+            </p>
+          </article>
+
+
+          <article class="system-card">
+            <div class="system-number">06</div>
+
+            <h3>Autonomía</h3>
+
+            <p>
+              Recupera control sobre tu tiempo,
+              energía y decisiones.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         MINI-APPS
+         ======================================================= -->
+
+    <section id="mini-apps" class="apps">
+
+      <div class="container">
+
+        <div class="section-header">
+
+          <div class="section-label">
+            Ecosistema Digital
+          </div>
+
+          <h2 class="section-title">
+            Mini-apps del
+            <span>Sistema.</span>
+          </h2>
+
+          <p class="section-description">
+            Un espacio preparado para integrar futuras herramientas,
+            calculadoras, asistentes y aplicaciones.
+          </p>
+
+        </div>
+
+
+        <div class="apps-grid">
+
+
+          <!-- MINI APP 01 -->
+
+          <article class="app-card">
+
+            <div class="app-number">
+              Mini-App 01
+            </div>
+
+            <h3>
+              Herramienta principal
+            </h3>
+
+            <p>
+              Espacio preparado para integrar una aplicación
+              interactiva del sistema.
+            </p>
+
+            <div class="app-placeholder">
+              Próximamente
+            </div>
+
+            <!--
+
+              PARA INSERTAR UNA MINI-APP:
+
+              <iframe
+                src="https://tu-mini-app.com"
+                title="Mini-App 01"
+                style="width:100%; height:500px; border:0;">
+              </iframe>
+
+            -->
+
+          </article>
+
+
+          <!-- MINI APP 02 -->
+
+          <article class="app-card">
+
+            <div class="app-number">
+              Mini-App 02
+            </div>
+
+            <h3>
+              Herramienta estratégica
+            </h3>
+
+            <p>
+              Espacio reservado para una segunda herramienta
+              interactiva del ecosistema.
+            </p>
+
+            <div class="app-placeholder">
+              Próximamente
+            </div>
+
+          </article>
+
+
+          <!-- MINI APP 03 -->
+
+          <article class="app-card">
+
+            <div class="app-number">
+              Mini-App 03
+            </div>
+
+            <h3>
+              Asistente de ejecución
+            </h3>
+
+            <p>
+              Espacio preparado para incorporar una herramienta
+              de apoyo a la ejecución.
+            </p>
+
+            <div class="app-placeholder">
+              Próximamente
+            </div>
+
+          </article>
+
+
+          <!-- MINI APP 04 -->
+
+          <article class="app-card">
+
+            <div class="app-number">
+              Mini-App 04
+            </div>
+
+            <h3>
+              Nueva herramienta
+            </h3>
+
+            <p>
+              El ecosistema podrá crecer con nuevas funcionalidades
+              y herramientas digitales.
+            </p>
+
+            <div class="app-placeholder">
+              Próximamente
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         CTA FINAL
+         ======================================================= -->
+
+    <section class="final-cta">
+
+      <div class="container">
+
+        <div class="final-cta-content">
+
+          <div class="section-label">
+            El siguiente movimiento
+          </div>
+
+          <h2>
+            Deja de construir un negocio
+            <span>que te necesita para todo.</span>
+          </h2>
+
+          <p>
+            Construye un sistema. Diseña tu autonomía.
+            Recupera el control sobre cómo trabajas y cómo
+            crece tu negocio.
+          </p>
+
+          <a
+            href="https://pay.hotmart.com/H107311208K?off=du9rzvgl&hotfeature=51"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button button-primary"
+          >
+            Acceder al Sistema →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <div>
+
+        <div class="footer-brand">
+          El Emprendedor Invisible
+        </div>
+
+        <div class="footer-description">
+          Manifiesto y Sistema para el Solopreneur Soberano.
+        </div>
+
+      </div>
+
+      <div class="copyright">
         © 2026 Todos los derechos reservados.
-      </p>
+      </div>
 
     </div>
 
